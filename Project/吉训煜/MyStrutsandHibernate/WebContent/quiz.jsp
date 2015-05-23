@@ -19,11 +19,9 @@
 
 <script type="text/javascript" src="./files_ji/jquery-1.4.2.min.js"></script>
 <script type="text/javascript">
-var init={'questions':[{'question':'jQuery是什么？','answers':['JavaScript库','CSS库','PHP框架','以上都不是'],'correctAnswer':1}]};
-
 $(function(){
 	$("#quiz-container").jquizzy({
-        questions: init.questions
+        
     });
 });
 </script>
@@ -40,22 +38,68 @@ $(function(){
 			
 			<div class="wrap">
 					<div class="demo">
-						<div id='quiz-container'></div>
+						<div id='quiz-container' class="main-quiz-holder">
+						  <form action="">
+						    <div class="intro-container slide-container">
+							<input class="search-input" type="text" placeholder="请输入症状"/> 
+							<br /><br />
+							<br />
+							<span><a href="javascript:void(0)" class="search-btn" >搜索</a></span>
+							</div>
+						  </form>
+						</div>						
 					</div>
 		    </div>
 		    <div class="clear"></div>
 		
-		    <div class="g-box expert-box">
-		    	<div class="g-blue-title title">根据您的测试结果，为您推荐的医生</div>
-		    	<div class="content">
-		    		<ul class="g-clear">
-		    			
-					</ul>	    		
+		    <div class="g-box search-box">
+		    	<div class="g-blue-title title">根据您的搜索结果，为您推荐的科室</div>
+		    	<div class="search info">
+		    		<table>
+							<colgroup>
+								<col width="45%">
+								<col width="30%">
+								<col class="last">
+							</colgroup>
+							<thead>
+								<tr>
+									<th><p>可能疾病</p></th>
+									<th><p>相应科室</p></th>
+									<th><p>操作</p></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div>高血压</div>
+										<p>高血压是以体循环动脉血压持续性增高为主要表现的临床综合征，是常见的心血管疾病。高血压分为原发性高血压和继发性高血压。继发性高血压多继发于肾、内分泌和神经系统疾病</p>
+									</td>
+									<td>心血管内科</td>
+									<td><a href="javascript:void(0)" class="control-btn">预约挂号</a></td>
+								</tr>	
+								<tr>
+									<td>
+										<div>高血压</div>
+										<p>高血压是以体循环动脉血压持续性增高为主要表现的临床综合征，是常见的心血管疾病。高血压分为原发性高血压和继发性高血压。继发性高血压多继发于肾、内分泌和神经系统疾病</p>
+									</td>
+									<td>心血管内科</td>
+									<td><a href="javascript:void(0)" class="control-btn">预约挂号</a></td>
+								</tr>	
+								<tr>
+									<td>
+										<div>高血压</div>
+										<p>高血压是以体循环动脉血压持续性增高为主要表现的临床综合征，是常见的心血管疾病。高血压分为原发性高血压和继发性高血压。继发性高血压多继发于肾、内分泌和神经系统疾病</p>
+									</td>
+									<td>心血管内科</td>
+									<td><a href="javascript:void(0)" class="control-btn">预约挂号</a></td>
+								</tr>														
+							</tbody>
+					</table>						    		
 		    	</div>		    	
 		    </div>
 		    <div class="clear"></div>
 		</div>
-		
+				
 		<div class="helpqs-list hide">
 			<div id="gf">
 				<div class="g-container">
