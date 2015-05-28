@@ -89,22 +89,22 @@
         var boxHeight = $("#mb_con").height();
         //让提示框居中
         $("#mb_con").css({ top: (_height - boxHeight) / 2 + "px", left: (_widht - boxWidth) / 2 + "px" });
-    }
+    };
     //确定按钮事件
     var btnOk = function (callback) {
         $("#mb_btn_ok").click(function () {
             $("#mb_box,#mb_con").remove();
+            window.location = "./reservationTime.jsp";
             if (typeof (callback) == 'function') {
-                callback();
+            	
+            	callback();
             }
         });
-    }
+    };
     //取消按钮事件
     var btnNo = function () {
         $("#mb_btn_no,#mb_ico").click(function () {
             $("#mb_box,#mb_con").remove();
         });
-    }
-
-
+    };
 })(jQuery);

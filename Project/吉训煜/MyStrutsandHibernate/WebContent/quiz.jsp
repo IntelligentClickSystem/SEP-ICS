@@ -99,15 +99,14 @@ $(function(){
 		    </div>
 		    <div class="clear"></div>
 		</div>
-				
-		<div class="helpqs-list hide">
+	</div>			
+		<div class="helpqs-list">
 			<div id="gf">
 				<div class="g-container">
 					<div class="clear"></div>
 					<p class="copyright">版权所有：软件工程实践小组&nbsp;&nbsp;&nbsp;</p>
 				</div>
 			</div>
-		</div>
-	</div>
+		</div>	
 </body>
 </html>

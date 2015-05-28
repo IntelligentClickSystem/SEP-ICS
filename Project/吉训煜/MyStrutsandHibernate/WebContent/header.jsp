@@ -32,7 +32,7 @@
 			<div class="container g-clear">
 				<div class="g-left">
 					<span class="text">您好 ${session.patient.name} </span> 
-					<a href="#" onmousedown="return _smartlog(this,&#39;TOP&#39;)">个人中心</a> 
+					<a href="unfinishedDiagnoseList.jsp" onmousedown="return _smartlog(this,&#39;TOP&#39;)">个人中心</a> 
 					<span class="line">|</span> 
 					<a href="order.jsp" onmousedown="return _smartlog(this,&#39;TOP&#39;)">预约单</a> 
 					<span class="line">|</span> 
