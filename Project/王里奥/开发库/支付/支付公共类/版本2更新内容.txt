@@ -1,0 +1,25 @@
+1，我对POJO里的Department，Doctor，Patient，Receipt，Schedule四个类的属性 和对应的hbm.xml映射文件进行了更新。主要是添加新的属性和映射，同时加入了一对多，多对一的映射关系。
+
+2，创建了test包，里面的test类对后台的输出进行测试用
+
+3,在DoctorDao中加入了如下方法
+public List<Doctor> getAccordingDoctors(int type,int departmentid);//获取科室下的对应的普通医生或专家医生列表,0表示普通医生，1表示专家医生
+
+public List<Doctor> displayOnlineDoc();//显示在线医生
+
+public boolean setDoctorSchedule(String did,int date,int time,int limit);//date from 1 to 7, time from 1 to 2，预约专家号使用
+
+public boolean setDepartmentSchedule(int departmentid,int date,int time,int limit); //预约普通号使用
+
+4，在PatientDao中加入了如下方法
+public List<Receipt> getReceiptAll(String pid);//获取所有订单
+
+public boolean payReceipt(int rid);//支付订单
+
+public boolean generateReceipt(String pid,String did,int departmentid);//产生订单
+
+public List<Department> getDepartmentAll();//获取所有的科室
+
+public boolean addMoney(String pid,Float amount);//由管理员在录入病人信息时进行维护
+
+public boolean updateMoney(String pid,Float amount);//用户消费是，对用户的信用额度进行更新，并判断能够继续消费
