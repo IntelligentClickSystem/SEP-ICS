@@ -113,7 +113,7 @@
 							</ul>
 							 <div class="action-line">
 								
-									<a href="./regeditfin.jsp" class="gbn gbt-blue2" id="regSubmit">注册</a>
+									<a href="./login.jsp" class="gbn gbt-blue2" id="regSubmit">注册</a>
 								
 							</div>
 						

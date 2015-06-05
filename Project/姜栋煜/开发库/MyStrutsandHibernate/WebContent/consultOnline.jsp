@@ -40,7 +40,7 @@
 	</p>
 	<div class="clear"></div>	
 	<ul class="none-border">
-		<li class="myorder"><a class="current myorder-a" href="order.jsp"><span class="gi2 gi-order"></span>我的预约单</a></li>
+		<li class="myorder"><a class="current myorder-a" href="order.jsp"><span class="gi2 gi-order"></span>在线咨询</a></li>
 	</ul>
 </div>
 		<div class="person-right">
@@ -99,7 +99,7 @@
 					  
 					  </td>
 					  <td >
-					      <a target=blank href=tencent://message/?uin=811165669&Site=http://localhost:8080/MyStrutsandHibernate/consultOnline.jsp&Menu=yes><img border="0" SRC=http://wpa.qq.com/pa?p=1:811165669:9 alt="有事Q我"></a>
+					      <a target=blank href=tencent://message/?uin=1434342008&Site=http://localhost:8080/MyStrutsandHibernate/consultOnline.jsp&Menu=yes><img border="0" SRC=http://wpa.qq.com/pa?p=1:1434342008:9 alt="有事Q我"></a>
                 	  </td>
 					 </tr>
 					 

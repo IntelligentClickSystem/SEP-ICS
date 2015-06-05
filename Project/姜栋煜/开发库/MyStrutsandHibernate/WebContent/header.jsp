@@ -32,7 +32,7 @@
 			<div class="container g-clear">
 				<div class="g-left">
 					<span class="text">您好 ${session.patient.name} </span> 
-					<a href="#" onmousedown="return _smartlog(this,&#39;TOP&#39;)">个人中心</a> 
+					<a href="unfinishedDiagnoseList.jsp" onmousedown="return _smartlog(this,&#39;TOP&#39;)">个人中心</a> 
 					<span class="line">|</span> 
 					<a href="order.jsp" onmousedown="return _smartlog(this,&#39;TOP&#39;)">预约单</a> 
 					<span class="line">|</span> 
@@ -90,7 +90,7 @@
 		<div class="gh-menu">
 			<div class="container">
 				<div class="g-left search-tabs-style" id="tab_all">
-					<a href="date.jsp">快速预约</a> 
+					<a href="quicklyReservation.jsp">快速预约</a> 
 					<a href="consultOnline.jsp">信息咨询</a>
 					<a href="diagnoseInfo.jsp">就诊信息</a> 
 					<a href="evaluateDoctor.jsp">就诊评价</a> 

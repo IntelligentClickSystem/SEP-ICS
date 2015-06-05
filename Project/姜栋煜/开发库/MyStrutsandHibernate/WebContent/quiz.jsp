@@ -40,11 +40,11 @@ $(function(){
 					<div class="demo">
 						<div id='quiz-container' class="main-quiz-holder">
 						  <form action="">
-						    <div class="intro-container slide-container">
-							<input class="search-input" type="text" placeholder="请输入症状"/> 
-							<br /><br />
-							<br />
-							<span><a href="javascript:void(0)" class="search-btn" >搜索</a></span>
+						    <div class="intro-container slide-container" >
+						     <input class="search-input" type="text" placeholder="请输入症状" />
+						       <div style="display:inline-block">						          
+								    <a href="javascript:void(0)" class="search-btn" >搜索</a>
+						       </div>								
 							</div>
 						  </form>
 						</div>						
@@ -99,15 +99,14 @@ $(function(){
 		    </div>
 		    <div class="clear"></div>
 		</div>
-				
-		<div class="helpqs-list hide">
+	</div>			
+		<div class="helpqs-list">
 			<div id="gf">
 				<div class="g-container">
 					<div class="clear"></div>
 					<p class="copyright">版权所有：软件工程实践小组&nbsp;&nbsp;&nbsp;</p>
 				</div>
 			</div>
-		</div>
-	</div>
+		</div>	
 </body>
 </html>

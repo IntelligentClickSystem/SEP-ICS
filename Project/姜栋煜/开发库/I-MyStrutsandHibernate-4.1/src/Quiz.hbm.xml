@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 4, 2014 9:47:12 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pojo.Quiz" table="t_quiz">
+        <id name="testId" type="java.lang.Integer">
+            <column name="testId" />
+            <generator class="native" />
+        </id>
+       
+        <property name="answer" type="java.lang.Boolean">
+            <column name="answer" />
+        </property>
+        
+        <property name="contens" type="java.lang.String">
+            <column name="contents" />
+        </property>
+        
+        
+        
+        <!-- 关系部分如下  待定 -->
+        
+     
+        
+    </class>
+</hibernate-mapping>
