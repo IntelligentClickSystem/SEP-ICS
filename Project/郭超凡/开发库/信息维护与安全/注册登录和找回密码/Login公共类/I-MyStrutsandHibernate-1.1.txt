@@ -1,1 +1,2 @@
-1
+1.对login.jsp中form中属性的跟新；
+2.更新patientAction类，patientDao类和patientDaoImpl中登入方法；
