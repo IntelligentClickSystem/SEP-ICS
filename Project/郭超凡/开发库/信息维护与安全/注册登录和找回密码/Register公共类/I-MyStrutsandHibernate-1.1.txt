@@ -1,0 +1,7 @@
+1.数据库表t_patient增加列IDnumber；
+2.regeditPatient2注册按钮的调整，及form的添加；
+3.对类PatientAction进行补充regist()；
+4.在stucts.xml添加<action>regist;
+5.在dao包中添加BaseDaoImp,PatientDao,PatientDaoImpl三个类；
+6.修改Patient.hbm.xml;
+7.修改patient类，添加IDnumber属性；
