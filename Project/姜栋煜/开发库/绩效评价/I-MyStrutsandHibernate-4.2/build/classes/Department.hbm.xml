@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 4, 2014 9:47:12 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pojo.Department" table="t_department">
+        <id name="departmentId" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+       
+        <property name="departmentName" type="java.lang.String">
+            <column name="departmentName" />
+        </property>
+        
+          <property name="location" type="java.lang.String">
+            <column name="location" />
+        </property>
+        
+        <!-- 关系部分如下  待定 -->
+        
+        <set name="doctors" inverse="true">
+        <key column="departmentId"/>
+        <one-to-many class="pojo.Doctor"></one-to-many>
+        </set>
+        
+        <set name="quizs" inverse="true">
+        <key column="departmentId"/>
+        <one-to-many class="pojo.Quiz"></one-to-many>
+        </set>
+        
+        <set name="diseases" inverse="true">
+        <key column="departmentId"/>
+        <one-to-many class="pojo.Disease"></one-to-many>
+        </set>
+        
+        <set name="receipts" inverse="true">
+        <key column="departmentId"/>
+        <one-to-many class="pojo.Receipt"></one-to-many>
+        </set>
+      
+    </class>
+</hibernate-mapping>
