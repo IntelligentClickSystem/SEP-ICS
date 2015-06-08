@@ -1,4 +1,5 @@
 (function($) {
+	
     $.fn.jquizzy = function() {
         $(".search-box").hide();
         $('.search-btn').click(function(){
@@ -8,6 +9,7 @@
                 data:{'title':"data"},
                 dataType:'json',
                 success: function(data){
+                
                 	$(".question").text(data.quiz.contens);
                     $(".demo").fadeOut(500);
                     
@@ -22,6 +24,26 @@
         $(".control-btn").click(function(id){
             $.MsgBox.Confirm("温馨提示","您确认要预约挂号吗?");
         });
+        
+        
+        $("#diseaseInput").keyup(function(){
+    		var diseaseDes =$("#diseaseInput").attr("value");//获得text的值
+    		$("#quizlist").empty();
+    		$.ajax({ 
+    		    type:'POST',        //请求的方式GET/POST 
+    		    url:"./quizAction",    //请求的服务器地址 
+    		    cache:false,        //是否缓存 
+    		    data:{'descrip':diseaseDes},//传递给服务器的数据,是JSON键值对格式 
+    		    dataType:'json',    //返回的数据类型 
+    		    success:function(data){//请求成功时执行的操作 
+    		    	
+    		    	$(data.quizlist).each(function (i, value) {     		    		
+    		    		$("#quizlist").append("<br>" + value.contens + "</br  >");     		    	
+    		    	}); 
+
+    		    } 
+    		});
+    	});
     };
     
 

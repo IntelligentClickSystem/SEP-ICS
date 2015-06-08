@@ -1,0 +1,5 @@
+1.对quiz.jsp输入框部分的更新；
+2.跟新quiz.js添加对对病症输入的ajax相应；
+3.添加QuizDao类和QuizDaoImpl类；
+4.对structs.xml中ajax的跟新；
+5.对QuizAction类的跟新；

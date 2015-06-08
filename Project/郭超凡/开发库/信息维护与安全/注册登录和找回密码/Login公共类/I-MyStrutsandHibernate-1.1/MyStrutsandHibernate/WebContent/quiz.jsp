@@ -18,12 +18,14 @@
 </style>
 
 <script type="text/javascript" src="./files_ji/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="./files_ji/quiz.js"></script>  
 <script type="text/javascript">
 $(function(){
 	$("#quiz-container").jquizzy({
         
     });
 });
+
 </script>
 <title>智能挂号系统</title>
 </head>
@@ -41,11 +43,17 @@ $(function(){
 						<div id='quiz-container' class="main-quiz-holder">
 						  <form action="">
 						    <div class="intro-container slide-container" >
-						     <input class="search-input" type="text" placeholder="请输入症状" />
+						    <input id="diseaseInput" class="search-input" type="text" placeholder="请输入症状" />
+						   
 						       <div style="display:inline-block">						          
 								    <a href="javascript:void(0)" class="search-btn" >搜索</a>
-						       </div>								
+						       </div>				
 							</div>
+							 <div id="quizlist">
+					
+						  	</div>
+							
+							
 						  </form>
 						</div>						
 					</div>

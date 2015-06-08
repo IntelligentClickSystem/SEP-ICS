@@ -3,6 +3,10 @@ package action;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
+
 import pojo.Doctor;
 import pojo.Patient;
 import pojo.Quiz;
@@ -11,6 +15,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 import dao.DoctorDao;
+import dao.QuizDaoImpl;
 
 
 public class QuizAction extends ActionSupport{
@@ -21,25 +26,33 @@ public class QuizAction extends ActionSupport{
 	private static final long serialVersionUID = 1L;
 
 	private int testId;
-	private char answer;
 	private String contents;
 	private int departId;
 	private Quiz quiz;
-	private List<Doctor> doctorInfo;
-    
+	private List<Quiz> quizlist;
+
+	private String descrip;
 	
+	public String getDescrip() {
+		return descrip;
+	}
+	public void setDescrip(String descrip) {
+		this.descrip = descrip;
+	}
+	
+	public List<Quiz> getQuizlist() {
+		return quizlist;
+	}
+	public void setQuizlist(List<Quiz> quizlist) {
+		this.quizlist = quizlist;
+	}
 	public int getTestId() {
 		return testId;
 	}
 	public void setTestId(int testId) {
 		this.testId = testId;
 	}
-	public char getAnswer() {
-		return answer;
-	}
-	public void setAnswer(char answer) {
-		this.answer = answer;
-	}
+
 	public String getContents() {
 		return contents;
 	}
@@ -54,15 +67,11 @@ public class QuizAction extends ActionSupport{
 	}
 	
 	public String showQuiz(){
-		//System.out.println("HELLO");
-		quiz = new Quiz();
-		quiz.setAnswer(true);
-		quiz.setContens("hahaj");
-		quiz.setTestId(1);
-	   	
-		doctorInfo = new ArrayList<Doctor>();
-		doctorInfo = new DoctorDao().getQuizDoctor();
-		
+		quizlist = new ArrayList<Quiz>();
+		System.out.println("ddd:"+descrip);
+		if(!descrip.equals("")){
+		quizlist = new QuizDaoImpl().isValidAnswer(descrip);
+		}
 		return SUCCESS;
 	}
 	
@@ -78,10 +87,5 @@ public class QuizAction extends ActionSupport{
 	public void setQuiz(Quiz quiz) {
 		this.quiz = quiz;
 	}
-	public List<Doctor> getDoctorInfo() {
-		return doctorInfo;
-	}
-	public void setDoctorInfo(List<Doctor> doctorInfo) {
-		this.doctorInfo = doctorInfo;
-	}
+
 }

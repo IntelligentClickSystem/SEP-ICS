@@ -1,2 +1,7 @@
 1.对login.jsp中form中属性的跟新；
 2.更新patientAction类，patientDao类和patientDaoImpl中登入方法；
+3.增加找回密码界面retrievePassword.jsp，及retrievePasswordAction类，sendMail类；
+4.引入MyAuthenticator类，RegisterServlet类，mail.jar,javax.servlet.jsp.jar,javax.servlet.jar;
+5.struts.xml里面添加邮件找回密码类映射；
+6.在PatientDao,PatientDaoImpl中添加findPassword方法；
+

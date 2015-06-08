@@ -126,7 +126,7 @@
 									</ul>
 									<div class="action-btn">
 										<button class="gbn gbt-green" id="logingo" type="submit"style="width:80px">登录</button>
-										<span class="forget-pw"> <a href="">忘记密码？</a>
+										<span class="forget-pw"> <a href="retrievePassword.jsp">忘记密码？</a>
 										</span>
 									</div>
 						</form>
