@@ -1,0 +1,5 @@
+1.我将department-doctor中1对多的关系中单向连接变为了双向连接
+2.我将patient-receipt中1对多的关系中单向连接变为了双向连接
+3.我建了个新类MyNewList去返回已就诊和待就诊的list
+4.我将department-receipt中1对多的关系中单向连接变为了双向连接
+5.我给activateList加了一个属性为：挂号的种类

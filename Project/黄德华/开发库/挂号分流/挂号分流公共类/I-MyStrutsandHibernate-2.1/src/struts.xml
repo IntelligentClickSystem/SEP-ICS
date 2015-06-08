@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.i18n.encoding" value="UTF-8" /> 
+
+    <package name="struts2" extends="json-default">
+        <action name="quizAction" class="action.QuizAction" method="showQuiz">
+ 		    <result name="success" type="json"></result>		    
+ 		</action>   
+ 		
+        <action name="login" class="action.PatientAction" method="login">
+ 		    <result name="success">/quiz.jsp</result>
+ 		</action>
+ 		
+ 		<action name="receiptsOfDoctorAction" class="action.DoctorAction" method="receiptsOfDoctor">
+ 		    <result name="success" >/doneDiagnoseList.jsp</result>		    
+ 		</action>  	 	
+ 		
+ 		<action name="activatesOfDoctorAction" class="action.DoctorAction" method="activateListOfDoctor">
+ 		    <result name="success" >/unfinishedDiagnoseList.jsp</result>		    
+ 		</action>  	 	 	
+    </package> 
+</struts>
