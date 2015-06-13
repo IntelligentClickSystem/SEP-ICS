@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 4, 2014 9:47:12 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pojo.SortDoctor" table="t_sortDoctor" >
+        <id name="doctorId" column="doctorId" >
+            <generator class="foreign">
+            <param name="property">doctor</param>
+            </generator>
+            
+        </id>
+       
+        
+        <property name="datetime" type="java.lang.Long" >
+            <column name="datetime"/>
+        </property>
+        
+
+        
+        
+        
+        <one-to-one name="doctor" constrained="true"></one-to-one>
+       
+        
+    </class>
+</hibernate-mapping>

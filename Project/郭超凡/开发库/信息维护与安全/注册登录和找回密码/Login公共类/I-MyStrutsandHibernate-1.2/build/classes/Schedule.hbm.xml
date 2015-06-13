@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 4, 2014 9:47:12 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pojo.Schedule" table="t_schedule">
+        <id name="scheduleId" type="java.lang.Integer">
+            <column name="scheduleId" />
+            <generator class="native" />
+        </id>
+       
+        <property name="date" type="java.lang.Integer">
+            <column name="date" />
+        </property>
+        
+        <property name="time" type="java.lang.Integer">
+            <column name="time" />
+        </property>
+        
+        <property name="limit" type="java.lang.Integer">
+            <column name="limit" />
+        </property>
+        
+      
+        <!-- 关系部分如下  待定 -->
+        <many-to-one name="doctor" column="doctorid"/>
+        <many-to-one name="department" column="departmentid"/>
+        
+        
+    </class>
+</hibernate-mapping>
